@@ -1,0 +1,53 @@
+Location,Language ,Ranking,Industry's Trending Now ,5 Years Previous (MD),5 Years Future (MD)
+,,,,,
+"Lagos, Nigeria","English, Hausa, Yoruba",1,Farming,Fishing,Forestry 
+"Lagos, Nigeria","English, Hausa, Yoruba",2,Fishing,Farming,Fishing
+"Lagos, Nigeria","English, Hausa, Yoruba",3,Forestry ,Forestry ,Farming
+"Lagos, Nigeria","English, Hausa, Yoruba",4,Communications,Transportation,Transportation
+"Lagos, Nigeria","English, Hausa, Yoruba",5,Transportation,Communications,Communications
+"Lagos, Nigeria","English, Hausa, Yoruba",6,Finance,Finance,Mining
+"Lagos, Nigeria","English, Hausa, Yoruba",7,Mining,Manufacturing,Finance
+"Lagos, Nigeria","English, Hausa, Yoruba",8,Manufacturing,Construction,Energy Production
+"Lagos, Nigeria","English, Hausa, Yoruba",9,Energy Production,Energy Production,Manufacturing
+"Lagos, Nigeria","English, Hausa, Yoruba",10,Construction,Mining,Construction
+"Lima, Peru",Spanish,1,Communications,Communications,Communications
+"Lima, Peru",Spanish,2,Transportation,Farming,Forestry 
+"Lima, Peru",Spanish,3,Finance,Forestry ,Communications
+"Lima, Peru",Spanish,4,Farming,Transportation,Farming
+"Lima, Peru",Spanish,5,Fishing,Fishing,Fishing
+"Lima, Peru",Spanish,6,Forestry ,Forestry ,Transportation
+"Lima, Peru",Spanish,7,Mining,Energy Production,Construction
+"Lima, Peru",Spanish,8,Manufacturing,Mining,Energy Production
+"Lima, Peru",Spanish,9,Energy Production,Manufacturing,Manufacturing
+"Lima, Peru",Spanish,10,Construction,Fishing,Mining
+"Accra, Ghana","English, Akan, Ewe, Ga, Dagaare, Dagbani",1,Farming,Farming,Farming
+"Accra, Ghana","English, Akan, Ewe, Ga, Dagaare, Dagbani",2,Fishing,Communications,Communications
+"Accra, Ghana","English, Akan, Ewe, Ga, Dagaare, Dagbani",3,Forestry ,Forestry ,Forestry 
+"Accra, Ghana","English, Akan, Ewe, Ga, Dagaare, Dagbani",4,Communications,Transportation,Fishing
+"Accra, Ghana","English, Akan, Ewe, Ga, Dagaare, Dagbani",5,Transportation,Finance,Transportation
+"Accra, Ghana","English, Akan, Ewe, Ga, Dagaare, Dagbani",6,Finance,Mining,Manufacturing
+"Accra, Ghana","English, Akan, Ewe, Ga, Dagaare, Dagbani",7,Mining,Manufacturing,Mining
+"Accra, Ghana","English, Akan, Ewe, Ga, Dagaare, Dagbani",8,Manufacturing,Energy Production,Finance
+"Accra, Ghana","English, Akan, Ewe, Ga, Dagaare, Dagbani",9,Energy Production,Construction,Construction
+"Accra, Ghana","English, Akan, Ewe, Ga, Dagaare, Dagbani",10,Construction,Construction,Energy Production
+"Mexico City, Mexico",Spanish,1,Communications,Energy Production,Construction
+"Mexico City, Mexico",Spanish,2,Transportation,Farming,Finance
+"Mexico City, Mexico",Spanish,3,Finance,Manufacturing,Transportation
+"Mexico City, Mexico",Spanish,4,Mining,Mining,Manufacturing
+"Mexico City, Mexico",Spanish,5,Manufacturing,Finance,Mining
+"Mexico City, Mexico",Spanish,6,Energy Production,Energy Production,Construction
+"Mexico City, Mexico",Spanish,7,Construction,Construction,Energy Production
+"Mexico City, Mexico",Spanish,8,Farming,Fishing,Forestry 
+"Mexico City, Mexico",Spanish,9,Fishing,Farming,Farming
+"Mexico City, Mexico",Spanish,10,Forestry ,Forestry ,Fishing
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,"SOURCES: https://www.indexmundi.com/nigeria/labor_force_by_occupation.html, https://www.indexmundi.com/peru/labor_force_by_occupation.html#:~:text=Agriculture%20includes%20farming%2C%20fishing%2C%20and,do%20not%20produce%20material%20goods., https://www.indexmundi.com/ghana/labor_force_by_occupation.html, https://www.indexmundi.com/mexico/labor_force_by_occupation.html, ",,
