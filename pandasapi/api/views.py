@@ -20,7 +20,7 @@ def get_future_job_trends(request , location):
     
     # Processing
     job_trends_df = pd.read_csv(job_trend_file)
-    filt = job_trends_df['Location'] == location
+    filt = job_trends_df['Location'].str.lower().str.strip().str.replace(" ", "") == location.lower().strip().replace(" ", "")
     columnsToGet = ['Ranking' , 'Future Job Predictions ']
     results = job_trends_df[filt][columnsToGet]
     results = results.to_json(orient='records')
@@ -32,7 +32,7 @@ def get_current_job_trends(request , location):
     job_trend_file = staticfiles_storage.path('database/job-trends.csv')
     # Processing
     job_trends_df = pd.read_csv(job_trend_file)
-    filt = job_trends_df['Location'] == location
+    filt = job_trends_df['Location'].str.lower().str.strip().str.replace(" ", "") == location.lower().strip().replace(" ", "")
     columnsToGet = ['Ranking' , 'Jobs Trending Now By Industry' , 'Job Description' , 'Profession Wage Per Area' , 'Living Wage Per Area']    
     results = job_trends_df[filt][columnsToGet]
     results = results.to_json(orient='records')
@@ -44,7 +44,7 @@ def get_available_programs(request , location):
     results = []
     available_programs_file = staticfiles_storage.path('database/available_programs.csv')
     available_programs_df = pd.read_csv(available_programs_file)
-    filt = available_programs_df['Location'] == location
+    filt = available_programs_df['Location'].str.lower().str.strip().str.replace(" ", "") == location.lower().strip().replace(" ", "")
     columnsToGet = ['Available Program' , 'Description']
     results = available_programs_df[filt][columnsToGet]
     results = results.to_json(orient='records')
@@ -56,7 +56,7 @@ def get_trending_jobs(request , location):
     results = []
     job_searches_file = staticfiles_storage.path('database/trending-job-searches-per-area.csv')
     df = pd.read_csv(job_searches_file)
-    filt = df['Location'] == location
+    filt = df['Location'].str.lower().str.strip().str.replace(" ", "") == location.lower().strip().replace(" ", "")
     columnsToGet = ['Trending Job Searches ']
     results = df[filt][columnsToGet]
     results = results.to_json(orient='records')
@@ -68,7 +68,7 @@ def get_common_language(request , location):
     results = []
     job_searches_file = staticfiles_storage.path('database/location-information.csv')
     df = pd.read_csv(job_searches_file)
-    filt = df['Location'] == location
+    filt = df['Location'].str.lower().str.strip().str.replace(" ", "") == location.lower().strip().replace(" ", "")
     columnsToGet = ['Language ']
     results = df[filt][columnsToGet]
     results = results.to_json(orient='records')
