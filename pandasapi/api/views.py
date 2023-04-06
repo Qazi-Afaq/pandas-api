@@ -10,7 +10,8 @@ import pandas as pd
 
 
 def index(request):
-    return HttpResponse("Welcome, Please use the following commands to fetch information:")
+    print("index")
+    return render(request, 'api/home.html')
 
 # set api views here for each function
 def get_future_job_trends(request , location):
