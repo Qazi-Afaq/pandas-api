@@ -18,11 +18,10 @@ def get_future_job_trends(request , location):
 
     results = []
     
-    # Processing
-    print(job_trend_file)
+    # processing
     job_trends_df = pd.read_csv(job_trend_file)
     filt = job_trends_df['Location'] == location
-    columnsToGet = ['Ranking' , 'Jobs Trending Now By Industry' , 'Job Description' , 'Profession Wage Per Area' , 'Living Wage Per Area']    
+    columnsToGet = ['Ranking' , 'Future Job Predictions ']
     results = job_trends_df[filt][columnsToGet]
     results = results.to_json(orient='records')
     results = json.loads(results)
@@ -67,10 +66,10 @@ def get_trending_jobs(request , location):
 
 def get_common_language(request , location):
     results = []
-    job_searches_file = staticfiles_storage.path('database/trending-job-searches-per-area.csv')
+    job_searches_file = staticfiles_storage.path('database/location-information.csv')
     df = pd.read_csv(job_searches_file)
     filt = df['Location'] == location
-    columnsToGet = ['Trending Job Searches ']
+    columnsToGet = ['Language ']
     results = df[filt][columnsToGet]
     results = results.to_json(orient='records')
     results = json.loads(results)    
