@@ -43,8 +43,8 @@ def get_current_job_trends(request , location):
 
 def get_available_programs(request , location):
     results = []
-    job_trend_file = staticfiles_storage.path('database/available_programs.csv')
-    available_programs_df = pd.read_csv(job_trend_file)
+    available_programs_file = staticfiles_storage.path('database/available_programs.csv')
+    available_programs_df = pd.read_csv(available_programs_file)
     filt = available_programs_df['Location'] == location
     columnsToGet = ['Available Program' , 'Description']
     results = available_programs_df[filt][columnsToGet]
@@ -55,8 +55,8 @@ def get_available_programs(request , location):
 
 def get_trending_jobs(request , location):
     results = []
-    job_trend_file = staticfiles_storage.path('database/trending-job-searches-per-area.csv')
-    df = pd.read_csv(job_trend_file)
+    job_searches_file = staticfiles_storage.path('database/trending-job-searches-per-area.csv')
+    df = pd.read_csv(job_searches_file)
     filt = df['Location'] == location
     columnsToGet = ['Trending Job Searches ']
     results = df[filt][columnsToGet]
@@ -67,8 +67,8 @@ def get_trending_jobs(request , location):
 
 def get_common_language(request , location):
     results = []
-    job_trend_file = staticfiles_storage.path('database/trending-job-searches-per-area.csv')
-    df = pd.read_csv(job_trend_file)
+    job_searches_file = staticfiles_storage.path('database/trending-job-searches-per-area.csv')
+    df = pd.read_csv(job_searches_file)
     filt = df['Location'] == location
     columnsToGet = ['Trending Job Searches ']
     results = df[filt][columnsToGet]
