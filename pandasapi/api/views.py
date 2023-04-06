@@ -10,7 +10,6 @@ import pandas as pd
 
 
 def index(request):
-    print("index")
     return render(request, 'api/home.html')
 
 # set api views here for each function
