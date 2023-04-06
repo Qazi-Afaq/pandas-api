@@ -14,8 +14,10 @@ def index(request):
 
 # set api views here for each function
 def get_future_job_trends(request , location):
-    results = []
     job_trend_file = staticfiles_storage.path('database/job-trends.csv')
+
+    results = []
+    
     # Processing
     print(job_trend_file)
     job_trends_df = pd.read_csv(job_trend_file)
@@ -27,13 +29,50 @@ def get_future_job_trends(request , location):
     return JsonResponse(results , safe=False)
 
 def get_current_job_trends(request , location):
-
-    return JsonResponse({})
+    results = []
+    job_trend_file = staticfiles_storage.path('database/job-trends.csv')
+    # Processing
+    job_trends_df = pd.read_csv(job_trend_file)
+    filt = job_trends_df['Location'] == location
+    columnsToGet = ['Ranking' , 'Jobs Trending Now By Industry' , 'Job Description' , 'Profession Wage Per Area' , 'Living Wage Per Area']    
+    results = job_trends_df[filt][columnsToGet]
+    results = results.to_json(orient='records')
+    results = json.loads(results)
+    
+    return JsonResponse(results , safe=False)
 
 def get_available_programs(request , location):
+    results = []
+    job_trend_file = staticfiles_storage.path('database/available_programs.csv')
+    available_programs_df = pd.read_csv(job_trend_file)
+    filt = available_programs_df['Location'] == location
+    columnsToGet = ['Available Program' , 'Description']
+    results = available_programs_df[filt][columnsToGet]
+    results = results.to_json(orient='records')
+    results = json.loads(results)
 
-    return JsonResponse({})
+    return JsonResponse(results , safe=False)
 
 def get_trending_jobs(request , location):
+    results = []
+    job_trend_file = staticfiles_storage.path('database/trending-job-searches-per-area.csv')
+    df = pd.read_csv(job_trend_file)
+    filt = df['Location'] == location
+    columnsToGet = ['Trending Job Searches ']
+    results = df[filt][columnsToGet]
+    results = results.to_json(orient='records')
+    results = json.loads(results)    
+    
+    return JsonResponse(results , safe=False)
 
-    return JsonResponse({})
+def get_common_language(request , location):
+    results = []
+    job_trend_file = staticfiles_storage.path('database/trending-job-searches-per-area.csv')
+    df = pd.read_csv(job_trend_file)
+    filt = df['Location'] == location
+    columnsToGet = ['Trending Job Searches ']
+    results = df[filt][columnsToGet]
+    results = results.to_json(orient='records')
+    results = json.loads(results)    
+    
+    return JsonResponse(results , safe=False)

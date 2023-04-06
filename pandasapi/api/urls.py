@@ -18,4 +18,5 @@ urlpatterns = [
     # get_trending_jobs
     path("api/get_trending_jobs/<location>" , views.get_trending_jobs , name='get_trending_jobs'),
     # get_common_language
+    path("api/get_common_language/<location>" , views.get_common_language , name='get_common_language'),
 ]
