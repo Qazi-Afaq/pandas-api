@@ -19,7 +19,6 @@ def get_future_job_trends(request , location):
     results = []
     
     # Processing
-    print(job_trend_file)
     job_trends_df = pd.read_csv(job_trend_file)
     filt = job_trends_df['Location'] == location
     columnsToGet = ['Ranking' , 'Jobs Trending Now By Industry' , 'Job Description' , 'Profession Wage Per Area' , 'Living Wage Per Area']    
